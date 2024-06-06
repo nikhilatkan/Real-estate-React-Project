@@ -1,0 +1,51 @@
+.logo-image {
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+}
+
+.headerContainer {
+    border: 1px solid rgb(219, 217, 217);
+    background-color: #fff;
+    box-shadow: 0 2px 3px rgba(178, 176, 176, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.headerSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 12px;
+    max-width: 1052px;
+    margin: auto;
+    margin-top: -30px;
+    margin-bottom: -36px;
+}
+
+.naviLinks {
+    display: flex;
+    list-style: none;
+}
+
+.naviLinks li {
+    margin: 20px;
+    cursor: pointer;
+    color: rgb(142, 141, 141);
+    font-weight: 600;
+    /* border-bottom-width: 5px;
+    border-color: aquamarine; */
+}
+
+/* .navlink {
+    border-bottom-width: 5px;
+    border-bottom-color: blue;
+  } */
+
+.active-link {
+    color: rgb(16, 14, 14) !important;
+    font-weight: bolder !important;
+    border-bottom-width: 50px;
+    border-bottom-color: blue;
+}

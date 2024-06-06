@@ -1,4 +1,5 @@
 import { useLocation, useNavigate } from "react-router";
+import "./Header.css";
 
 function Header() {
   const location = useLocation();
@@ -30,17 +31,15 @@ function Header() {
               Home
             </li>
             <li
-              className={`navlink ${
-                pathMatchRoute("/offers") && "active-link"
-              }`}
+              className={`navlink ${pathMatchRoute("/offers") && "active-link"
+                }`}
               onClick={() => navigate("/offers")}
             >
               Offers
             </li>
             <li
-              className={`navlink ${
-                pathMatchRoute("/sign-in") && "active-link"
-              }`}
+              className={`navlink ${pathMatchRoute("/sign-in") && "active-link"
+                }`}
               onClick={() => navigate("/sign-in")}
             >
               Sign in
