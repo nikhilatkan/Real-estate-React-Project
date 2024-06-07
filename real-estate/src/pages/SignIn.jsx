@@ -1,8 +1,25 @@
+import { useState } from "react";
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
+
 function SignIn() {
+  const [formData, setFormData] = useState({ email: "", password: "" });
+  const [showPassword, setShowPassword] = useState(false);
+
+  const { email, password } = formData;
+
+  function onChange(e) {
+    setFormData((prevState) => ({
+      ...prevState,
+      [e.target.id]: e.target.value,
+      // console.log(e.target.value);
+    }));
+  }
+
   return (
     <section className="sign-in-heading">
       <h1>Sign in</h1>
-      <div>
+      <div className="sign-in-container">
         <div className="signin-img-container">
           <img
             className="signin-img"
@@ -10,9 +27,38 @@ function SignIn() {
             alt="key"
           />
         </div>
-        <div>
-          <form>
-            <input type="text" />
+        <div className="input-signin">
+          <form className="signin-forms">
+            <input
+              type="email"
+              className="textfld-signin"
+              id="email"
+              value={email}
+              onChange={onChange}
+              placeholder="Email Address"
+            />
+            <div className="pass-signin">
+              <input
+                type={showPassword ? "text" : "password"}
+                className="textfld-signin"
+                id="password"
+                value={password}
+                onChange={onChange}
+                placeholder="Password"
+              />
+              {showPassword ? (
+                <FaEyeSlash
+                  className="eye-signin"
+                  onClick={() => setShowPassword((prevState) => !prevState)}
+                />
+              ) : (
+                <FaEye
+                  className="eye-signin"
+                  // onClick={setShowPassword(false)}
+                  onClick={() => setShowPassword((prevState) => !prevState)}
+                />
+              )}
+            </div>
           </form>
         </div>
       </div>

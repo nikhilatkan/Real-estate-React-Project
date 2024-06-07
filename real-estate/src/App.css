@@ -22,7 +22,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0px 12px;
-  max-width: 1052px;
+  max-width: 80%;
   margin: auto;
   margin-top: -30px;
   margin-bottom: -36px;
@@ -63,6 +63,7 @@ body {
 
 .signin-img-container {
   width: 45%;
+  margin-bottom: 6px;
 }
 
 .signin-img {
@@ -71,9 +72,80 @@ body {
   border-radius: 2%;
 }
 
+.sign-in-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 80%;
+  margin: auto;
+}
+
+.input-signin {
+  width: 55%;
+}
+
+.textfld-signin {
+  width: 90%;
+  padding-left: 10px;
+  height: 30px;
+  color: rgb(69, 69, 69);
+  border-color: grey;
+  border-radius: 4px;
+  border: 1px solid grey;
+  outline: none;
+  transition: border-color 0.4s ease-in-out;
+}
+
+.textfld-signin:focus {
+  border: 2px solid rgb(55, 118, 194);
+}
+#password {
+  margin-top: 10px;
+}
+
+.pass-signin {
+  position: relative;
+}
+
+.eye-signin {
+  position: absolute;
+  right: 1.75rem;
+  top: 1.1rem;
+  cursor: pointer;
+}
+
 @media (min-width: 577px) and (max-width: 769px) {
   /* CSS rules here */
   .signin-img {
     width: 67%;
+  }
+
+  .signin-img-container {
+    width: 100%;
+    margin-bottom: 6px;
+  }
+
+  .input-signin {
+    width: 67%;
+  }
+}
+
+@media (max-width: 576px) {
+  /* CSS rules here */
+  .signin-img {
+    width: 67%;
+  }
+
+  .signin-img-container {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .input-signin {
+    width: 67%;
+  }
+  .textfld-signin {
+    width: 90%;
   }
 }
