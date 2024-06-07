@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import OAuth from "../components/OAuth";
 
 function SignIn() {
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -59,6 +61,26 @@ function SignIn() {
                 />
               )}
             </div>
+            <div className="sign-in-links">
+              <p>
+                Don't have an account?
+                <Link to="/sign-up"> Register</Link>
+              </p>
+              <p>
+                <Link to="/forgot-password" className="frgt-signin">
+                  Forgot Password?
+                </Link>
+              </p>
+            </div>
+            <button type="submit" className="signin-btn">
+              Sign in
+            </button>
+            <div className="or-sign-in">
+              <div className="border"></div>
+              <p className="or-content">OR</p>
+              <div className="border"></div>
+            </div>
+            <OAuth />
           </form>
         </div>
       </div>
