@@ -1,12 +1,12 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import SignIn from "./pages/SignIn";
-import Profile from "./pages/Profile";
-import SignUp from "./pages/SignUp";
-import ForgotPassword from "./pages/ForgotPassword";
-import Offers from "./pages/Offers";
-import Header from "./components/Header";
+import Home from "./pages/Home/Home";
+import SignIn from "./pages/SignIn/SignIn";
+import Profile from "./pages/Profile/Profile";
+import SignUp from "./pages/SignUp/SignUp";
+import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
+import Offers from "./pages/Offers/Offers";
+import Header from "./components/Header/Header";
 function App() {
   return (
     <>
